@@ -1,0 +1,285 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Orbitron', sans-serif;
+    background: linear-gradient(135deg, #00CED1, #008B8B);
+    color: white;
+    text-align: center;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: justify;
+    padding: 20px 50px;
+    background: rgba(0, 139, 139, 0.9);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    flex-wrap: wrap; /* Para permitir que os itens se ajustem em telas pequenas */
+}
+
+header h1 {
+    font-size: 28px;
+    flex: 1; /* Adiciona flexibilidade ao título */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #7FFFD4;
+}
+
+/* Responsividade para telas pequenas */
+@media (max-width: 768px) {
+    header {
+        padding: 20px 20px; /* Menos padding nas telas pequenas */
+    }
+
+    header h1 {
+        font-size: 24px; /* Reduz o tamanho da fonte do título */
+        text-align: center;
+        margin-bottom: 10px; /* Adiciona um pequeno espaçamento abaixo */
+    }
+
+    nav ul {
+        flex-direction: column; /* Coloca os itens de navegação em coluna */
+        align-items: center;
+        gap: 10px; /* Menos espaçamento entre os itens */
+    }
+
+    nav a {
+        font-size: 16px; /* Ajusta o tamanho da fonte para telas pequenas */
+    }
+}
+
+
+section {
+    padding: 120px 20px;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    background: rgba(0, 0, 0, 0.3);
+    margin: 20px auto;
+    border-radius: 10px;
+    width: 80%;
+}
+
+.animar {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+.imagem-perfil {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 20px 0;
+    border: 3px solid #7FFFD4;
+}
+
+.botao {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #7FFFD4;
+    color: black;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s ease-in-out;
+    font-size: 1rem; /* Tamanho padrão da fonte */
+}
+
+/* Efeito hover */
+.botao:hover {
+    background: #40E0D0;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .botao {
+        padding: 12px 25px; /* Um pouco mais de padding para telas menores */
+        font-size: 1.2rem; /* Aumenta o tamanho da fonte em telas pequenas */
+        width: 100%; /* Faz o botão ocupar toda a largura disponível */
+        text-align: center; /* Alinha o texto ao centro */
+    }
+}
+
+@media (max-width: 480px) {
+    .botao {
+        font-size: 1rem; /* Ajusta o tamanho da fonte para smartphones */
+        padding: 10px 20px; /* Ajusta o padding para smartphones */
+    }
+}
+
+
+.sobre {
+    background: linear-gradient(135deg, rgba(0, 139, 139, 0.8), rgba(0, 139, 139, 0.6)), url('background-sobre.jpg') no-repeat center center;
+    background-size: cover;
+    color: white;
+    padding: 60px 20px;
+    border-radius: 10px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    margin-top: 100px;
+    text-align: justify;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+}
+
+.sobre h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #fff;
+    text-align: center;
+}
+
+.sobre p {
+    font-size: 1.1rem;
+    color: #ddd;
+    text-align: justify;
+    font-weight: 400;
+}
+
+.sobre p::first-letter {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #00CED1;
+    transition: transform 0.3s ease-in-out;
+}
+
+.sobre p:hover::first-letter {
+    transform: scale(1.3);
+}
+#toggle-text {
+    color: #00CED1;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#toggle-text:hover {
+    color: #40E0D0;
+}
+
+@media (max-width: 768px) {
+    .sobre {
+        padding: 40px 15px;
+    }
+
+    .sobre h2 {
+        font-size: 2rem;
+    }
+
+    .sobre p {
+        font-size: 1rem;
+    }
+
+    .projetos-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .projeto {
+        width: 100%;
+    }
+}
+
+/* Container dos projetos */
+.projetos-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Estilo de cada projeto */
+.projeto {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px; /* Largura fixa para desktop */
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+/* Estilo da imagem do projeto */
+.projeto img {
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* Remover sublinhado e deixar o texto branco para o link */
+.projeto a, p, h3 {
+    color: white; /* Torna o texto branco */
+    text-decoration: none; /* Remove o sublinhado */
+    display: block; /* Faz o link ocupar toda a área do projeto */
+}
+
+/* Adicionar hover para os links */
+.projeto a:hover {
+    color: #7FFFD4; /* Cor que aparece ao passar o mouse */
+}
+
+/* Responsividade para telas menores (tablets) */
+@media (max-width: 768px) {
+    .projeto {
+        width: 45%; /* 45% da largura disponível em tablets */
+    }
+}
+
+/* Responsividade para telas muito pequenas (smartphones) */
+@media (max-width: 480px) {
+    .projeto {
+        width: 100%; /* 100% da largura disponível em smartphones */
+        padding: 15px; /* Menos padding para smartphones */
+    }
+}
+
+
+footer {
+    padding: 20px;
+    background: #008080;
+    font-size: 14px;
+}
+
+.redes-sociais {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.redes-sociais a {
+    color: white;
+    font-size: 20px;
+    transition: color 0.3s;
+}
+
+.redes-sociais a:hover {
+    color: #7FFFD4;
+}
