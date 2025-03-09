@@ -15,26 +15,34 @@ body {
 header {
     display: flex;
     justify-content: space-between;
-    align-items: justify;
-    padding: 20px 50px;
+    align-items: center; /* Corrigido */
+    padding: 15px 50px;
     background: rgba(0, 139, 139, 0.9);
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    flex-wrap: wrap; /* Para permitir que os itens se ajustem em telas pequenas */
+    flex-wrap: wrap;
 }
 
 header h1 {
     font-size: 28px;
-    flex: 1; /* Adiciona flexibilidade ao título */
+    flex: 1;
+    color: white;
 }
 
+/* Estilizando o menu */
 nav ul {
     list-style: none;
     display: flex;
     gap: 25px;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
 }
 
 nav a {
@@ -48,28 +56,57 @@ nav a:hover {
     color: #7FFFD4;
 }
 
+/* Estilização do botão de menu (hambúrguer) */
+#menu-toggle {
+    display: none; /* Esconde o botão em telas grandes */
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
 /* Responsividade para telas pequenas */
 @media (max-width: 768px) {
     header {
-        padding: 20px 20px; /* Menos padding nas telas pequenas */
+        padding: 15px 20px;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
     }
 
     header h1 {
-        font-size: 24px; /* Reduz o tamanho da fonte do título */
-        text-align: center;
-        margin-bottom: 10px; /* Adiciona um pequeno espaçamento abaixo */
+        font-size: 24px;
+        margin-bottom: 10px;
     }
 
+    /* Estilização do menu responsivo */
     nav ul {
-        flex-direction: column; /* Coloca os itens de navegação em coluna */
+        flex-direction: column;
         align-items: center;
-        gap: 10px; /* Menos espaçamento entre os itens */
+        width: 100%;
+        display: none; /* Oculta o menu por padrão */
+    }
+
+    nav ul li {
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
     }
 
     nav a {
-        font-size: 16px; /* Ajusta o tamanho da fonte para telas pequenas */
+        font-size: 18px;
+        display: block;
+        width: 100%;
+        padding: 10px;
+    }
+
+    /* Exibir o botão do menu */
+    #menu-toggle {
+        display: block;
     }
 }
+
 
 
 section {

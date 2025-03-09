@@ -16,6 +16,16 @@ document.addEventListener("DOMContentLoaded", function() {
     animaAoRolar();
 });
 
+    document.getElementById("menu-toggle").addEventListener("click", function() {
+        var menu = document.getElementById("menu");
+        if (menu.style.display === "flex") {
+            menu.style.display = "none";
+        } else {
+            menu.style.display = "flex";
+            menu.style.flexDirection = "column";
+        }
+    });
+
 function toggleText() {
     var fullText = document.getElementById('full-text');
     var introText = document.getElementById('intro-text');
