@@ -260,6 +260,59 @@ section {
     }
 }
 
+#conquistas-academicas {
+    padding: 40px;
+    background-color: #f4f4f4;
+    color: #333;
+    font-family: 'Arial', sans-serif;
+}
+
+#conquistas-academicas h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #00796b; /* Usando um tom de verde que combina com a paleta */
+    margin-bottom: 30px;
+}
+
+.conquista {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.conquista h3 {
+    font-size: 1.8rem;
+    color: #00796b; /* Usando o mesmo verde para manter o padrão */
+    margin-bottom: 10px;
+}
+
+.conquista p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+@media (max-width: 768px) {
+    #conquistas-academicas {
+        padding: 20px;
+    }
+    .conquista {
+        padding: 15px;
+    }
+    #conquistas-academicas h2 {
+        font-size: 2rem;
+    }
+    .conquista h3 {
+        font-size: 1.5rem;
+    }
+    .conquista p {
+        font-size: 1rem;
+    }
+}
+
+
 
 footer {
     padding: 20px;
