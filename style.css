@@ -285,38 +285,58 @@ h1, h2, h3 {
     transition: transform 0.3s;
 }
 
+/* Imagem do projeto */
 .projeto img {
     width: 100%;
     border-radius: 10px;
     object-fit: cover;
 }
 
-/* Remover sublinhado e deixar o texto branco para o link */
-.projeto a, p, h3 {
+/* Justificar o texto */
+.projeto p {
+    text-align: justify;
+    color: white;
+}
+
+/* Remover sublinhado e definir cor branca para os textos */
+.projeto h3, .projeto a {
     color: white;
     text-decoration: none;
     display: block;
 }
 
-/* Adicionar hover para os links */
-.projeto a:hover {
-    color: #7FFFD4;
+/* Botão "Ver Projeto" */
+.projeto .botao-projeto {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 15px;
+    background-color: #7FFFD4;
+    color: black;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background 0.3s;
 }
 
-/* Responsividade para telas menores (tablets) */
+/* Efeito hover no botão */
+.projeto .botao-projeto:hover {
+    background-color: #5FD3A1;
+}
+
+/* Responsividade para tablets */
 @media (max-width: 768px) {
     .projeto {
         width: 45%;
     }
 }
 
-/* Responsividade para telas muito pequenas (smartphones) */
+/* Responsividade para smartphones */
 @media (max-width: 480px) {
     .projeto {
         width: 100%;
         padding: 15px;
     }
 }
+
 
 #conquistas-academicas {
     padding: 40px;
