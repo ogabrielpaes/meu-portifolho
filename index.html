@@ -40,7 +40,7 @@
             Enquanto cursava Publicidade e Propaganda, minha paixão por tecnologia floresceu ainda mais. Decidi que era hora de alavancar minhas habilidades para o próximo nível. Não queria me contentar apenas em criar conteúdo; queria ser parte da transformação digital. O passo mais natural foi alavancar minha carreira na área de TI, onde pude explorar ainda mais minhas habilidades em programação e design. O que antes era uma combinação de comunicação criativa agora se tornava uma jornada para entender como a tecnologia poderia gerar e expandir minhas ideias. 
             Hoje, busco oportunidades em empresas que compartilham dessa visão: unir comunicação e tecnologia de uma forma que crie experiências imersivas, impactantes e capazes de transformar o cotidiano das pessoas. Não estou apenas acompanhando as tendências, mas estou empenhado em ser parte ativa dessa transformação, onde cada projeto é uma chance de integrar inovação tecnológica e narrativas envolventes.
         </p>
-        <a href="javascript:void(0);" id="toggle-text" onclick="toggleText()">Leia mais...</a>
+        <a href="javascript:void(0);" id="toggle-text" onclick="toggleSobreMim()">Leia mais...</a>
     </section>
     
 
@@ -55,39 +55,58 @@
         <h2>Projetos</h2>
         <p>Confira alguns dos meus trabalhos!</p>
         <div class="projetos-container">
-            <!-- Projeto 1 -->
-            <div class="projeto">
-                <img src="img/logolinkinlive.png" alt="Projeto 1">
-                <h3>Linkin Live</h3>
-                <p>Este projeto é uma página web interativa criada para exibir informações e uma coleção de vídeos ao vivo da banda Linkin Live. O site utiliza um carrossel de imagens com links para o YouTube, permitindo aos usuários navegar facilmente entre os shows e assistir aos vídeos ao vivo. 🎸🎤</p>
-                <a href="https://linkinlive.vercel.app/" target="_blank" class="botao-projeto">Ver Projeto</a>
-            </div>
-    
-            <!-- Projeto 2 -->
-            <div class="projeto">
-                <img src="img/doutora miau.png" alt="Projeto 2">
-                <h3>Palestra Dra. Miau</h3>
-                <p>Criar esta palestra foi um processo significativo, focado em promover uma reflexão sobre a cremação de animais de estimação como uma forma respeitosa de despedida. A ideia surgiu da necessidade de conscientizar sobre como essa prática honra a memória dos animais e, ao mesmo tempo, contribuir para um futuro mais sustentável e saudável para as comunidades e o planeta. Busquei tornar o conteúdo claro e empático, ressaltando os benefícios emocionais e ambientais.</p>
-                <a href="img/palestra doutora miau.pdf" target="_blank" class="botao-projeto">Ver Projeto</a>
-            </div>
-    
-            <!-- Projeto 3 -->
-            <div class="projeto">
-                <img src="img/jogo.png" alt="Projeto 3">
-                <h3>Jogo do Número Secreto</h3>
-                <p>Projeto Acadêmico: O jogo oferece um jogo simples e divertido onde o usuário precisa adivinhar um número secreto entre 1 e 50. A cada tentativa, o jogo fornece dicas para ajudar o jogador a chegar ao número correto. Com uma interface intuitiva, o site oferece uma experiência de jogo envolvente e desafiante.</p>
-                <a href="https://game2-xi.vercel.app/" target="_blank" class="botao-projeto">Ver Projeto</a>
-            </div>
-
-              <!-- Projeto 4 -->
-              <div class="projeto">
-                <img src="img/POenergy.png" alt="Projeto 4">
-                <h3>Planejamento de Comunicação e Marketing Digital com Foco em Redes Sociais</h3>
-                <p> Desenvolver o planejamento de comunicação e marketing digital da PO Energy foi um processo estratégico e criativo, guiado por uma análise profunda do cenário digital atual da empresa. Comecei com um diagnóstico completo do público-alvo, concorrência e presença online, utilizando ferramentas como a análise SWOT para mapear oportunidades e desafios. A partir disso, defini objetivos claros como a geração de leads, o fortalecimento da marca e a construção de uma comunidade online engajada. Estruturei estratégias específicas para redes sociais, marketing de conteúdo, tráfego pago e SEO, sempre pensando na personalização das mensagens para cada plataforma. O plano também contou com um cronograma editorial detalhado e metas mensuráveis, garantindo controle e otimização contínua. Essa experiência me permitiu aplicar conhecimentos de branding, planejamento estratégico e marketing digital de forma integrada, com foco em resultados reais para o negócio.</p>
-                <a href="img/plano de comunicacao - POEnergy.pdf" target="_blank" class="botao-projeto">Ver Projeto</a>
-            </div>
+      
+          <!-- Projeto 1 -->
+          <div class="projeto">
+            <img src="img/logolinkinlive.png" alt="Projeto 1">
+            <h3>Linkin Live</h3>
+            <p>Este projeto é uma página web interativa criada para exibir informações e uma coleção de vídeos ao vivo da banda Linkin Live. O site utiliza um carrossel de imagens com links para o YouTube, permitindo aos usuários navegar facilmente entre os shows e assistir aos vídeos ao vivo. 🎸🎤</p>
+            <a href="https://linkinlive.vercel.app/" target="_blank" class="botao-projeto">Ver Projeto</a>
+          </div>
+      
+          <!-- Projeto 2 -->
+          <div class="projeto">
+            <img src="img/doutora miau.png" alt="Projeto 2">
+            <h3>Palestra Dra. Miau</h3>
+            <p>
+              <span class="texto-curto">
+                Criar esta palestra foi um processo significativo, focado em promover uma reflexão sobre a cremação de animais de estimação...
+              </span>
+              <span class="texto-completo" style="display: none;">
+                como uma forma respeitosa de despedida. A ideia surgiu da necessidade de conscientizar sobre como essa prática honra a memória dos animais e, ao mesmo tempo, contribuir para um futuro mais sustentável e saudável para as comunidades e o planeta. Busquei tornar o conteúdo claro e empático, ressaltando os benefícios emocionais e ambientais.
+              </span>
+              <a href="javascript:void(0);" class="toggle-text" onclick="toggleTextoProjeto(this)">Leia mais...</a>
+            </p>
+            <a href="img/palestra doutora miau.pdf" target="_blank" class="botao-projeto">Ver Projeto</a>
+          </div>
+      
+          <!-- Projeto 3 -->
+          <div class="projeto">
+            <img src="img/jogo.png" alt="Projeto 3">
+            <h3>Jogo do Número Secreto</h3>
+            <p>Projeto Acadêmico: O jogo oferece um jogo simples e divertido onde o usuário precisa adivinhar um número secreto entre 1 e 50. A cada tentativa, o jogo fornece dicas para ajudar o jogador a chegar ao número correto. Com uma interface intuitiva, o site oferece uma experiência de jogo envolvente e desafiante.</p>
+            <a href="https://game2-xi.vercel.app/" target="_blank" class="botao-projeto">Ver Projeto</a>
+          </div>
+      
+          <!-- Projeto 4 -->
+          <div class="projeto">
+            <img src="img/POenergy.png" alt="Projeto 4">
+            <h3>Planejamento de Comunicação e Marketing Digital com Foco em Redes Sociais</h3>
+            <p>
+              <span class="texto-curto">
+                Desenvolver o planejamento de comunicação e marketing digital da PO Energy foi um processo estratégico e criativo...
+              </span>
+              <span class="texto-completo" style="display: none;">
+                guiado por uma análise profunda do cenário digital atual da empresa. Comecei com um diagnóstico completo do público-alvo, concorrência e presença online, utilizando ferramentas como a análise SWOT para mapear oportunidades e desafios. A partir disso, defini objetivos claros como a geração de leads, o fortalecimento da marca e a construção de uma comunidade online engajada. Estruturei estratégias específicas para redes sociais, marketing de conteúdo, tráfego pago e SEO, sempre pensando na personalização das mensagens para cada plataforma. O plano também contou com um cronograma editorial detalhado e metas mensuráveis, garantindo controle e otimização contínua. Essa experiência me permitiu aplicar conhecimentos de branding, planejamento estratégico e marketing digital de forma integrada, com foco em resultados reais para o negócio.
+              </span>
+              <a href="javascript:void(0);" class="toggle-text" onclick="toggleTextoProjeto(this)">Leia mais...</a>
+            </p>
+            <a href="img/plano de comunicacao - POEnergy.pdf" target="_blank" class="botao-projeto">Ver Projeto</a>
+          </div>
+      
         </div>
-    </section>    
+      </section>
+          
 
     <section id="conquistas-academicas" class="conquistas-academicas">
         <h2>Conquistas Acadêmicas</h2>
@@ -109,7 +128,7 @@
         <h2>Contato</h2>
         <p>Vamos trabalhar juntos? Entre em contato comigo.
         </p>
-        <a href="ogabrielpaes@gmail.com" class="botao">ogabrielpaes@gmail.com</a>
+        <a href="mailto:ogabrielpaes@gmail.com" class="botao">ogabrielpaes@gmail.com</a>
         <div class="redes-sociais">
             <a href="https://www.linkedin.com/in/ogabrielpaes/"><i class="fab fa-linkedin"></i></a>
             <a href="https://github.com/ogabrielpaes"><i class="fab fa-github"></i></a>
