@@ -59,4 +59,33 @@ document.addEventListener("DOMContentLoaded", function () {
             this.textContent = isHidden ? "Leia menos..." : "Leia mais...";
         });
     });
+
+    // Lógica para o carrossel de projetos
+    const prevButton = document.getElementById("prev-button");
+    const nextButton = document.getElementById("next-button");
+    const container = document.querySelector(".projetos-container");
+
+    if (prevButton && nextButton && container) {
+        let scrollAmount = 0;
+
+        nextButton.addEventListener("click", function () {
+            // Recalcular a largura do projeto a cada clique
+            const projectWidth = document.querySelector(".projeto").offsetWidth;
+            const maxScroll = container.scrollWidth - container.clientWidth;
+
+            if (scrollAmount < maxScroll) {
+                scrollAmount += projectWidth;
+                container.scrollTo({ left: scrollAmount, behavior: "smooth" });
+            }
+        });
+
+        prevButton.addEventListener("click", function () {
+            const projectWidth = document.querySelector(".projeto").offsetWidth;
+
+            if (scrollAmount > 0) {
+                scrollAmount -= projectWidth;
+                container.scrollTo({ left: scrollAmount, behavior: "smooth" });
+            }
+        });
+    }
 });

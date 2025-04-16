@@ -322,6 +322,13 @@ h1, h2, h3 {
     background-color: #5FD3A1;
 }
 
+/* Estilo do carrossel */
+.carrossel {
+    display: flex;
+    transition: transform 0.5s ease; /* Transição suave ao mover o carrossel */
+    overflow: hidden; /* Esconde os itens que ficam fora da tela */
+}
+
 /* Responsividade para tablets */
 @media (max-width: 768px) {
     .projeto {
@@ -336,6 +343,37 @@ h1, h2, h3 {
         padding: 15px;
     }
 }
+
+/* Estilo dos botões do carrossel */
+.carrossel-botao {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 5px;
+}
+
+/* Botão "Anterior" */
+.carrossel-botao.anterior {
+    left: 10px;
+}
+
+/* Botão "Próximo" */
+.carrossel-botao.proximo {
+    right: 10px;
+}
+
+/* Ajustando a largura e comportamento para o carrossel */
+.carrossel .projeto {
+    flex: 0 0 100%; /* Cada projeto ocupa 100% da largura do carrossel */
+    transition: transform 0.3s ease-in-out; /* Transição suave ao mover os projetos */
+}
+
 
 
 #conquistas-academicas {
