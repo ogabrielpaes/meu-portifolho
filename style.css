@@ -149,8 +149,8 @@ h1, h2, h3 {
 }
 
 .imagem-perfil {
-    width: 150px;
-    height: 150px;
+    width: 280px;
+    height: 280px;
     border-radius: 50%;
     object-fit: cover;
     margin: 20px 0;
